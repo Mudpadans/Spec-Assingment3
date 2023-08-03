@@ -11,22 +11,22 @@ const Footer = () => {
         <div className={classes.socialsIcons}>
           <div className={classes.socialMedia}>
             <a href="https://www.devmountain.com" target="_blank">
-              <ImFacebook size="1.5em" color="25AAE1" />
+              <ImFacebook size="1.5em" color="#0BB9BC" />
             </a>
           </div>
           <div className={classes.socialMedia}>
             <a href="https://www.devmountain.com" target="_blank">
-              <ImInstagram size="1.5em" color="#25AAE1" />
+              <ImInstagram size="1.5em" color="#0BB9BC" />
             </a>
           </div>
           <div className={classes.socialMedia}>
             <a href="https://www.devmountain.com" target="_blank">
-              <ImTwitter size="1.5em" color="#25AAE1" />
+              <ImTwitter size="1.5em" color="#0BB9BC" />
             </a>
           </div>
           <div className={classes.socialMedia}>
             <a href="https://www.devmountain.com" target="_blank">
-              <ImGithub size="1.5em" color="#25AAE1" />
+              <ImGithub size="1.5em" color="#0BB9BC" />
             </a>
           </div>
         </div>
