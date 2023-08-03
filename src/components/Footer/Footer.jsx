@@ -1,24 +1,34 @@
 import React from "react";
 import { ImFacebook, ImInstagram, ImTwitter, ImGithub } from "react-icons/im";
 
+import classes from './Footer.module.css'
+
 const Footer = () => {
   return (
     <footer>
-      <div>
+      <div className={classes.socials}>
         <h5>Hit us up on our socials!</h5>
-        <div>
-          <a href="https://www.devmountain.com" target="_blank">
-            <ImFacebook size="1.5em" color="#3f3f3f" />
-          </a>
-          <a href="https://www.devmountain.com" target="_blank">
-            <ImInstagram size="1.5em" color="#3f3f3f" />
-          </a>
-          <a href="https://www.devmountain.com" target="_blank">
-            <ImTwitter size="1.5em" color="#3f3f3f" />
-          </a>
-          <a href="https://www.devmountain.com" target="_blank">
-            <ImGithub size="1.5em" color="#3f3f3f" />
-          </a>
+        <div className={classes.socialsIcons}>
+          <div className={classes.socialMedia}>
+            <a href="https://www.devmountain.com" target="_blank">
+              <ImFacebook size="1.5em" color="25AAE1" />
+            </a>
+          </div>
+          <div className={classes.socialMedia}>
+            <a href="https://www.devmountain.com" target="_blank">
+              <ImInstagram size="1.5em" color="#25AAE1" />
+            </a>
+          </div>
+          <div className={classes.socialMedia}>
+            <a href="https://www.devmountain.com" target="_blank">
+              <ImTwitter size="1.5em" color="#25AAE1" />
+            </a>
+          </div>
+          <div className={classes.socialMedia}>
+            <a href="https://www.devmountain.com" target="_blank">
+              <ImGithub size="1.5em" color="#25AAE1" />
+            </a>
+          </div>
         </div>
       </div>
       <svg
@@ -27,6 +37,7 @@ const Footer = () => {
         viewBox="0 0 512 512"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        className={classes.logo}
       >
         <circle cx="256" cy="256" r="248" stroke="#25AAE1" stroke-width="16" />
         <path
