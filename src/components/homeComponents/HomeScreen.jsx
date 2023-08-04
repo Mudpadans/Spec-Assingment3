@@ -1,9 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import AdBanner from './AdBanner'
+import RecipeCard from '../RecipeCard/RecipeCard';
 
 const HomeScreen = () => { 
   const [recipes, setRecipes] = useState([])
+
+  const [search, setSearch] = useState([])
   
   const getRecipes = () => {
     axios 
@@ -21,7 +24,14 @@ const HomeScreen = () => {
   return (
     <div>
       <AdBanner />
-      {/* Much code from Part 2 will be placed around here. Do your best! */}
+      <span>
+        {/* <BiSearchAlt2 size="2em" color="#DA7635" /> */}
+        <input 
+          type="text"
+          value={search}
+          onChange={(e) => setSearch}
+        />
+      </span>
     </div>
   )
 }
