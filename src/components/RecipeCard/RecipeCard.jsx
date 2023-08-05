@@ -12,7 +12,7 @@ const RecipeCard = () => {
                 <img src="" alt="steak"/>
                 <h3>Rosemary Seared Steak</h3>
                 <button>See More</button>
-            </div>g
+            </div>
             <div>
                 <img src="" alt="martini"/>
                 <h3>Some Martini</h3>
