@@ -2,40 +2,29 @@ import React from 'react';
 import cakeImage from '../../assets/cake.jpg';
 import steakImage from '../../assets/steak.jpg';
 import martiniImage from '../../assets/martini.jpg';
+import styles from './RecipeCard.modules.css'
 
-const RecipeCard = (key, recipe) => {
+const RecipeCard = () => {
     return (
-        <div>
+        <div className={styles.recipe_card}>
             <div>
-                <img 
-                    src={cakeImage} 
-                    alt="cake" 
-                    style={{
-                        height: "300px",
-                        width: "300px"
-                    }}/>
+                <div>
+                    <img src={cakeImage} alt="cake"/>
+                </div>
                 <h3>Triple chocolate mousse cake</h3>
                 <button>See More</button>
             </div>
             <div>
-                <img 
-                    src={steakImage} 
-                    alt="cake" 
-                    style={{
-                        height: "300px",
-                        width: "300px"
-                    }}/>
+                <div>
+                    <img src={steakImage} alt="cake"/>
+                </div>
                 <h3>Rosemary Seared Steak</h3>
                 <button>See More</button>
             </div>
             <div>
-                <img 
-                    src={martiniImage} 
-                    alt="cake" 
-                    style={{
-                        height: "300px",
-                        width: "300px"
-                    }}/>
+                <div>
+                    <img src={martiniImage} alt="cake"/>
+                </div>
                 <h3>Some Martini</h3>
                 <button>See More</button>
             </div>
@@ -43,4 +32,4 @@ const RecipeCard = (key, recipe) => {
     );
 }
 
-export default RecipeCard
+export default RecipeCard;
