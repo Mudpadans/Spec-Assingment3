@@ -17,20 +17,13 @@ const RecipeContainer = ({recipes}) => {
       })
 
       return (
-        <span style={{ 
-          display: "flex", 
-          justifyContent: "center",
-          margin: "20px"
-        }}>
+        <span className={styles.search_bar}>
           <BiSearchAlt2 size="2em" color="#DA7635" />
           <input 
             type="text"
             value={search}
             onChange={(e) => setSearch(e.target.value)}
             placeholder='Search for a recipe'
-            style={{
-              textAlign: "center"
-            }}
           />
           {recipeDisplay}
         </span>
