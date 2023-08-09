@@ -1,9 +1,13 @@
 import React from 'react'
+import AdBanner from '../homeComponents/AdBanner';
+import Footer from '../Footer/Footer';
+import styles from './DetailScreen.modules.css';
 
 const DetailScreen = () => {  
   return (
     <section>
-      {/* Welcome to the details page! This page will be reusable. Follow instructions to know what to do here. */}
+      <AdBanner/>
+      <Footer/>
     </section>
   );
 };

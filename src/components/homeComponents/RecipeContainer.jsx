@@ -17,15 +17,21 @@ const RecipeContainer = ({recipes}) => {
       })
 
       return (
-        <span className={styles.search_bar}>
-          <BiSearchAlt2 size="2em" color="#DA7635" />
-          <input 
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder='Search for a recipe'
-          />
-          {recipeDisplay}
-        </span>
+        <section className={styles.recipe_section}>
+          <span className={styles.search_bar}>
+            <BiSearchAlt2 size="2em" color="#DA7635" />
+            <input 
+              type="text"
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              placeholder='Search for a recipe'
+            />
+          </span>
+            <div className={styles.recipe_container}>
+              {recipeDisplay}
+            </div>
+        </section>
       )
   }
+
+export default RecipeContainer;
