@@ -1,10 +1,42 @@
 import React from "react";
 
 const NewRecipeScreen = () => {
+  const initialValues = {
+    type: "",
+    recipeName: "",
+    imageURL: "",
+    prepTime: "",
+    cookTime: "",
+    serves: "",
+    ingredients: [],
+    instructions: "",
+  };
+
+  
+
   return (
     <section>
       <h1>Tell us about your Recipe!</h1>
-      {/* Here you will have a large form. Be prepared, part 4 will have you build this form in detail, and part 5 will have you style it. Do your best! */}
+        <form>
+          <label></label>
+          <input />
+          <label></label>
+          <input />
+          <label></label>
+          <input />
+          <label></label>
+          <input />
+          <label></label>
+          <input />
+          <label></label>
+          <input />
+          <label></label>
+          <input />
+          <button type="radio"></button>
+          <button type="radio"></button>
+          <button type="radio"></button>
+          <textarea></textarea>
+        </form>
     </section>
   );
 };

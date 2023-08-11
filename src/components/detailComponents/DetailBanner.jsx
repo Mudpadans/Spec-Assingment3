@@ -1,17 +1,16 @@
-import steak from '../../assets/steak2.jpg'
+import styles from './DetailScreen.module.css'
 
-const DetailBanner = () => {
+const DetailBanner = ({ image, title }) => {
     return (
         <div 
+            className={styles.banner}
             style={{
                 background: `linear-gradient(
                     190deg,
                     rgba(0, 0, 0, 0.8),
                     rgba(0, 0, 0, 0.8)),
-                    url(${steak})`,
-                backgroundSize: "cover",
-                backgroundPosition: "center center",
-                height: "300px"
+                    url(${image})`,
+                backgroundPosition: "center center"
             }}
         >
             <div
@@ -19,15 +18,15 @@ const DetailBanner = () => {
                     textAlign: "center"
                 }}
             >
-                <h3
+                <h1
                     style={{
                         color: "orange",
                         fontSize: "42px",
                         margin: "auto",
                         padding: "120px 0px 0px 0px"
                     }}
-                >RoseMary Steak
-                </h3>
+                >{title}
+                </h1>
             </div>
         </div>
     )

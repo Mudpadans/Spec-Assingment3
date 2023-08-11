@@ -20,8 +20,6 @@ const HomeScreen = () => {
     getRecipes()
   }, [])
 
-
-
   return (
     <div>
       <AdBanner />
