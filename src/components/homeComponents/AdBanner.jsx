@@ -12,7 +12,14 @@ const AdBanner = () => {
           rgba(0, 0, 0, 0.8)),
           url(${salmon})`,
         backgroundSize: "cover",
-        height: "300px",
+        width: '100%',
+        height: "450px",
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        gap: '30px',
+        color: 'white',
       }}
     >
       <div
@@ -33,7 +40,7 @@ const AdBanner = () => {
             padding: "20px 0px"
           }}
         >Pineapple Salmon</h1>
-        <h3
+        <h4
           style={{
             color: "white",
             width: "500px",
@@ -42,7 +49,7 @@ const AdBanner = () => {
         >
           This recipe consists of fresh wild Alaskan salmon, rubbed in a bbq
           brown sugar rub, baked for 25 minutes on a bed of pineapple, and garnished in butter, garlic, and chives. You won’t want to miss it!
-        </h3>
+        </h4>
         <Link to="/recipe/3">
           <button 
             style={{
