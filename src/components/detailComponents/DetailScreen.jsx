@@ -9,6 +9,7 @@ import styles from './DetailScreen.module.css'
 const DetailScreen = () => {  
   const { id } = useParams()
   const [recipe, setRecipe] = useState({})
+  const [error, setError] = useState(false);  
 
   useEffect(() => {
     axios
@@ -16,7 +17,16 @@ const DetailScreen = () => {
       .then((res) => {
         setRecipe(res.data)
       })
-  })
+      .catch((err) => {
+        console.log(err)
+        setError(true);
+      })
+  }, [id])
+
+  if (error) {
+    return <div>An error occurred while loading the recipe. Please try again later.</div>;
+  }
+
 
   return (
     <section>

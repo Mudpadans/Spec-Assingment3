@@ -24,10 +24,10 @@ const HomeScreen = () => {
     <div>
       <AdBanner />
       <RecipeContainer recipes={recipes}/>
+      <div style={{ height: '13000px' }}></div> 
     </div>
   )
 }
 
 export default HomeScreen
 
-// 

@@ -55,83 +55,86 @@ const NewRecipeScreen = () => {
       <h1>Tell us about your Recipe!</h1>
         <Formik initialValues={initialValues} onSubmit={onSubmit}>
           {({ values, handleChange, handleSubmit }) => (
-          <Form onSubmit={handleSubmit}>
-            <label for="radio-buttons">
-              <label for="cook">Cook
-                <Field type="radio" name="type" value="cook"/>
+          <form onSubmit={handleSubmit}>
+            <div className={styles.input_container}>
+              <input 
+                placeholder="Title" 
+                value={values.recipeName}
+                onChange={handleChange}
+                name="recipeName"
+              />
+              <input 
+                placeholder="URL"
+                value={values.imageURL}
+                onChange={handleChange}
+                name="imageURL"
+              />
+            </div>
+            <div className={styles.radio_container}>
+              <label for="radio-buttons">
+                <label for="cook">Cook
+                  <input type="radio" name="type" value="cook"/>
+                </label>
+                <label for="bake">Bake
+                  <input type="radio" name="type" value="bake"/>
+                </label>
+                <label for="drink">Drink
+                  <input type="radio" name="type" value="drink"/>
+                </label>
               </label>
-              <label for="bake">Bake
-                <Field type="radio" name="type" value="bake"/>
-              </label>
-              <label for="drink">Drink
-                <Field type="radio" name="type" value="drink"/>
-              </label>
-            </label>
-            <label>Recipe Name</label>
-            <Field 
-              placeholder="Title your Recipe!" 
-              value={values.recipeName}
-              onChange={handleChange}
-              name="recipeName"
-            />
-            <label>Image URL</label>
-            <Field 
-              placeholder="Place your Image"
-              value={values.imageURL}
-              onChange={handleChange}
-              name="imageURL"
-            />
-            <label>Prep Time</label>
-            <input 
-              placeholder="Place your Prep Time"
-              value={values.prepTime}
-              onChange={handleChange}
-              name="prepTime"
-            />
-            <label>Cook Time</label>
-            <input 
-              placeholder="Place your Cook Time"
-              value={values.cookTime}
-              onChange={handleChange}
-              name="cookTime"
-            />
-            <label>Number of People Served</label>
-            <input 
-              placeholder="Place your Amount of People Served"
-              value={values.serves}
-              onChange={handleChange}
-              name="serves"
-            />
-            <label>Ingredients</label>
-            <input 
-              placeholder="Place your Ingredients"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            />
-            <label>Quantity</label>
-            <input 
-              placeholder="Place your Quantity"
-              value={quantity}
-              onChange={(e) => setQuantity(e.target.value)}
-            />
-            <ul>{ingredientDisplay}</ul>
+            </div>
+            <div className={styles.input_container}>
+              <input 
+                placeholder="Prep Time"
+                value={values.prepTime}
+                onChange={handleChange}
+                name="prepTime"
+              />
+              <input 
+                placeholder="Cook Time"
+                value={values.cookTime}
+                onChange={handleChange}
+                name="cookTime"
+              />
+              <input 
+                placeholder="People Served"
+                value={values.serves}
+                onChange={handleChange}
+                name="serves"
+              />
+            </div>
+            <h3>New Ingredients</h3>
+              <div className={styles.input_container}>
+                <div className={styles.ingredient_inputs}>
+                  <input 
+                    placeholder="Ingredients"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  />
+                  <input 
+                    placeholder="Quantity"
+                    value={quantity}
+                    onChange={(e) => setQuantity(e.target.value)}
+                  />
+                </div>
+                <ul>{ingredientDisplay}</ul>
+              </div>
             <button
               type="button"
-              className="orange-btn"
+              className={styles.orange_btn}
               onClick={addIngredient}
             >Add Ingredients</button>
             <label>Instructions</label>
-            <Field 
-              as="textarea" 
+            <textarea 
               rows={6}
               value={values.instructions}
               onChange={handleChange}
               name="instructions"
-            ></Field>
-            <button type="submit" className="blue-btn">
+            ></textarea>
+            <button type="submit" className={styles.blue_btn}>
               Submit
             </button>
-          </Form>
+          </form>
           )}
         </Formik>
     </section>
