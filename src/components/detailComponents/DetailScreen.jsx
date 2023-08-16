@@ -50,7 +50,7 @@ const DetailScreen = () => {
           <h3>Instructions</h3>
           <br/>
           <p style={{ whiteSpace: "pre-wrap" }}>
-            {recipe.instructions && JSON.parse(recipe.instructions)}
+            {recipe.instructions}
           </p>
         </div>
       </div>
@@ -60,3 +60,4 @@ const DetailScreen = () => {
 };
 
 export default DetailScreen;
+

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios';
 import AdBanner from './AdBanner';
 import RecipeContainer from './RecipeContainer';
+import styles from './Home.module.css'
 
 
 const HomeScreen = () => { 
@@ -21,9 +22,9 @@ const HomeScreen = () => {
   }, [])
 
   return (
-    <div>
+    <div className={styles.homescreen}>
       <AdBanner />
-      <RecipeContainer recipes={recipes}/>
+      <RecipeContainer recipes={recipes} />
       <div style={{ height: '13000px' }}></div> 
     </div>
   )
